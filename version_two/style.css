@@ -1,0 +1,53 @@
+/* ----------------------------------------------------------
+   SPONSOR SLIDER — FIXED FOR ALL DEVICES
+-----------------------------------------------------------*/
+
+/* Outer wrapper (keeps overflow hidden) */
+.sponsor-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* The moving track (must NOT have a fixed width!) */
+.sponsor-track {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 3rem;
+    animation: sponsorScroll 22s linear infinite;
+}
+
+/* Each sponsor item */
+.sponsor-item {
+    flex: 0 0 auto !important;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sponsor-item img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Infinite scroll animation (because JS duplicates the list) */
+@keyframes sponsorScroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+/* Phone responsiveness */
+@media (max-width: 768px) {
+    .sponsor-track {
+        gap: 1.5rem;
+        animation-duration: 16s;
+    }
+
+    .sponsor-item img {
+        height: 55px;
+    }
+}

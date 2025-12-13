@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participants | CodeBloom Rwanda Hackathon 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="img/favicon.jpg">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50">
+    <custom-navbar></custom-navbar>
+
+    <!-- Participants Hero -->
+    <section class="bg-gradient-to-r from-blue-500 to-teal-400 text-white py-20 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Phase One Qualifiers</h1>
+            <p class="max-w-2xl mx-auto text-lg">
+                These talented participants have advanced to the semi-finals
+            </p>
+        </div>
+    </section>
+
+    <!-- Announcement -->
+    <section class="py-12 bg-yellow-50">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-sm">
+                <i data-feather="alert-circle" class="w-12 h-12 text-yellow-500 mb-4 mx-auto"></i>
+                <h2 class="text-2xl font-bold mb-4 text-gray-800">Important Announcement</h2>
+                <p class="text-lg mb-4 text-gray-700">
+                    All participants who passed the first round will meet at ULK Kigali on 15/12/2025 for the semi-final preparation and briefing.
+                </p>
+                <p class="text-gray-600">
+                    Please bring your national ID and confirmation email.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Participants Grid -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Phase One Qualifiers</h2>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="participants-grid">
+                <!-- Participants will be added via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <custom-footer></custom-footer>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>
