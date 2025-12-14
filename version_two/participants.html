@@ -27,14 +27,51 @@
     <section class="py-12 bg-yellow-50">
         <div class="container mx-auto px-4 text-center">
             <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-sm">
-                <i data-feather="alert-circle" class="w-12 h-12 text-yellow-500 mb-4 mx-auto"></i>
-                <h2 class="text-2xl font-bold mb-4 text-gray-800">Important Announcement</h2>
-                <p class="text-lg mb-4 text-gray-700">
-                    All participants who passed the first round will meet at ULK Kigali on 15/12/2025 for the semi-final preparation and briefing.
-                </p>
-                <p class="text-gray-600">
-                    Please bring your national ID and confirmation email.
-                </p>
+                <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-sm">
+    <i data-feather="alert-circle" class="w-12 h-12 text-yellow-500 mb-4 mx-auto"></i>
+
+    <h2 class="text-2xl font-bold mb-3 text-gray-800">
+        Important Announcement
+    </h2>
+
+    <p class="text-lg mb-4 text-gray-700">
+        All participants who passed the first round will meet at
+        <strong>ULK Kigali</strong> on <strong>15/12/2025</strong> for the semi-final preparation and briefing.
+    </p>
+
+    <p class="text-gray-600 mb-6">
+        Please bring your national ID and confirmation email.
+    </p>
+
+    <!-- Countdown -->
+    <div class="bg-gray-100 rounded-lg p-4">
+        <p class="text-sm text-gray-600 mb-3 font-medium">
+            Time remaining until briefing starts (2:00 PM):
+        </p>
+
+        <div class="grid grid-cols-4 gap-3 text-center">
+            <div class="bg-white rounded-lg p-3 shadow">
+                <div id="days" class="text-2xl font-bold text-blue-600">0</div>
+                <div class="text-xs text-gray-500">Days</div>
+            </div>
+            <div class="bg-white rounded-lg p-3 shadow">
+                <div id="hours" class="text-2xl font-bold text-blue-600">0</div>
+                <div class="text-xs text-gray-500">Hours</div>
+            </div>
+            <div class="bg-white rounded-lg p-3 shadow">
+                <div id="minutes" class="text-2xl font-bold text-blue-600">0</div>
+                <div class="text-xs text-gray-500">Minutes</div>
+            </div>
+            <div class="bg-white rounded-lg p-3 shadow">
+                <div id="seconds" class="text-2xl font-bold text-blue-600">0</div>
+                <div class="text-xs text-gray-500">Seconds</div>
+            </div>
+        </div>
+
+        <p id="countdown-status" class="text-sm mt-4 text-green-600 font-medium"></p>
+    </div>
+</div>
+
             </div>
         </div>
     </section>
@@ -54,5 +91,38 @@
     <script src="components/footer.js"></script>
     <script src="script.js"></script>
     <script>feather.replace();</script>
+    <script>
+    const targetDate = new Date(2025, 11, 15, 14, 0, 0); // Dec = 11
+
+    function updateCountdown() {
+        const now = new Date();
+        const diff = targetDate - now;
+
+        if (diff <= 0) {
+            document.getElementById("days").textContent = 0;
+            document.getElementById("hours").textContent = 0;
+            document.getElementById("minutes").textContent = 0;
+            document.getElementById("seconds").textContent = 0;
+            document.getElementById("countdown-status").textContent =
+                "🎉 The briefing time has been reached!";
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+</script>
+
 </body>
+
 </html>
