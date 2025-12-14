@@ -38,23 +38,25 @@ class CustomFooter extends HTMLElement {
             </div>
 
             <!-- Contact Info -->
-            <div>
-              <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
-              <ul class="space-y-2 text-gray-400">
-                <li class="flex items-start">
-                  <i data-feather="map-pin" class="w-5 h-5 mr-2 mt-0.5"></i>
-                  <span>KG 123 St, Kigali Heights</span>
-                </li>
-                <li class="flex items-center">
-                  <i data-feather="mail" class="w-5 h-5 mr-2"></i>
-                  <span>info@codeforgrowth.rw</span>
-                </li>
-                <li class="flex items-center">
-                  <i data-feather="phone" class="w-5 h-5 mr-2"></i>
-                  <span>+250 788 123 456</span>
-                </li>
-              </ul>
-            </div>
+<div>
+  <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+
+  <!-- Address -->
+  <div class="flex items-start text-gray-400 mb-4">
+    <i data-feather="map-pin" class="w-5 h-5 mr-2 mt-0.5"></i>
+    <span>KG 123 St, Kigali Heights</span>
+  </div>
+
+  <!-- Alert Card -->
+  <div class="bg-yellow-600/10 border border-yellow-500/30 rounded-lg p-4 flex items-start">
+    <i data-feather="alert-triangle" class="w-5 h-5 text-yellow-400 mr-3 mt-0.5"></i>
+    <p class="text-yellow-300 text-sm">
+      We’re sorry — email and phone contact details are currently available
+      <strong>only to registered participants</strong>.
+    </p>
+  </div>
+</div>
+
 
             <!-- Social -->
             <div>
@@ -81,4 +83,5 @@ class CustomFooter extends HTMLElement {
 }
 
 customElements.define('custom-footer', CustomFooter);
+
 
