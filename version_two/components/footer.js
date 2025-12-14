@@ -60,10 +60,10 @@ class CustomFooter extends HTMLElement {
             <div>
               <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
               <div class="flex space-x-4">
-                <a href="#" class="bg-gray-700 p-3 rounded-full hover:bg-blue-600 transition"><i data-feather="facebook"></i></a>
-                <a href="#" class="bg-gray-700 p-3 rounded-full hover:bg-blue-400 transition"><i data-feather="twitter"></i></a>
-                <a href="#" class="bg-gray-700 p-3 rounded-full hover:bg-pink-600 transition"><i data-feather="instagram"></i></a>
-                <a href="#" class="bg-gray-700 p-3 rounded-full hover:bg-blue-700 transition"><i data-feather="linkedin"></i></a>
+                <a href="https://www.facebook.com/" class="bg-gray-700 p-3 rounded-full hover:bg-blue-600 transition"><i data-feather="facebook"></i></a>
+                <a href="https://x.com/" class="bg-gray-700 p-3 rounded-full hover:bg-blue-400 transition"><i data-feather="x"></i></a>
+                <a href="https://www.instagram.com/" class="bg-gray-700 p-3 rounded-full hover:bg-pink-600 transition"><i data-feather="instagram"></i></a>
+                <a href="https://www.linkedin.com/" class="bg-gray-700 p-3 rounded-full hover:bg-blue-700 transition"><i data-feather="linkedin"></i></a>
               </div>
             </div>
           </div>
@@ -81,3 +81,4 @@ class CustomFooter extends HTMLElement {
 }
 
 customElements.define('custom-footer', CustomFooter);
+
