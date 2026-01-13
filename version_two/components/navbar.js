@@ -38,6 +38,7 @@ class CustomNavbar extends HTMLElement {
               <a href="index.html" class="nav-link text-gray-600 hover:text-gray-900" data-page="index.html">Home</a>
               <a href="about.html" class="nav-link text-gray-600 hover:text-gray-900" data-page="about.html">About</a>
               <a href="participants.html" class="nav-link text-gray-600 hover:text-gray-900" data-page="participants.html">Participants</a>
+              <a href="compains.html" class="block nav-link text-gray-600" data-page="participants.html">Compains</a>
               <a href="contact.html" class="nav-link text-gray-600 hover:text-gray-900" data-page="contact.html">Contact</a>
             </div>
 
@@ -56,6 +57,7 @@ class CustomNavbar extends HTMLElement {
             <a href="index.html" class="block nav-link text-gray-600" data-page="index.html">Home</a>
             <a href="about.html" class="block nav-link text-gray-600" data-page="about.html">About</a>
             <a href="participants.html" class="block nav-link text-gray-600" data-page="participants.html">Participants</a>
+             <a href="compains.html" class="block nav-link text-gray-600" data-page="participants.html">Compains</a>
             <a href="contact.html" class="block nav-link text-gray-600" data-page="contact.html">Contact</a>
           </div>
         </div>
@@ -88,3 +90,4 @@ class CustomNavbar extends HTMLElement {
 }
 
 customElements.define('custom-navbar', CustomNavbar);
+
