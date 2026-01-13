@@ -33,6 +33,7 @@ class CustomFooter extends HTMLElement {
                 <li><a href="index.html" class="footer-link text-gray-400 flex items-center"><i data-feather="chevron-right" class="w-4 h-4 mr-2"></i> Home</a></li>
                 <li><a href="about.html" class="footer-link text-gray-400 flex items-center"><i data-feather="chevron-right" class="w-4 h-4 mr-2"></i> About</a></li>
                 <li><a href="participants.html" class="footer-link text-gray-400 flex items-center"><i data-feather="chevron-right" class="w-4 h-4 mr-2"></i> Participants</a></li>
+                 <li><a href="compains.html" class="footer-link text-gray-400 flex items-center"><i data-feather="chevron-right" class="w-4 h-4 mr-2"></i>Compains</a></li>
                 <li><a href="contact.html" class="footer-link text-gray-400 flex items-center"><i data-feather="chevron-right" class="w-4 h-4 mr-2"></i> Contact</a></li>
               </ul>
             </div>
@@ -83,5 +84,6 @@ class CustomFooter extends HTMLElement {
 }
 
 customElements.define('custom-footer', CustomFooter);
+
 
 
