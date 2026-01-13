@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Compains | CodeBloom Rwanda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="img/favicon.jpg">
+</head>
+
+<body class="bg-gray-50">
+    <custom-navbar></custom-navbar>
+
+    <!-- Header -->
+    <section class="bg-gradient-to-r from-blue-500 to-teal-400 text-white py-16">
+        <div class="container mx-auto text-center px-4">
+            <h1 class="text-4xl font-bold mb-4">Hackathon Compains Timeline</h1>
+            <p class="max-w-2xl mx-auto text-lg">
+                Track all official compains, pauses, and participant terminations throughout the Code for Growth Hackathon 2025.
+            </p>
+        </div>
+    </section>
+
+    <!-- Compains Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 grid gap-8 max-w-4xl">
+
+            <!-- Compain 1 -->
+            <div class="bg-red-100 border-l-4 border-red-500 p-6 rounded-lg relative">
+                <h2 class="text-2xl font-bold text-red-700">Compain 1</h2>
+                <p class="text-gray-700 mt-2">Date: <strong>15 / 12 / 2025</strong></p>
+                <p class="mt-3 text-gray-600">
+                    Initial enforcement compain focused on rule compliance and team eligibility verification.
+                </p>
+                <button onclick="showTerminated('c1')" 
+                    class="absolute bottom-4 right-4 text-sm bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+                    View Terminated Participants
+                </button>
+            </div>
+
+            <!-- Compain 2 -->
+            <div class="bg-red-100 border-l-4 border-red-500 p-6 rounded-lg relative">
+                <h2 class="text-2xl font-bold text-red-700">Compain 2</h2>
+                <p class="text-gray-700 mt-2">Date: <strong>21 / 12 / 2025</strong></p>
+                <p class="mt-3 text-gray-600">
+                    Second evaluation round addressing plagiarism and inactive teams.
+                </p>
+                <button onclick="showTerminated('c2')" 
+                    class="absolute bottom-4 right-4 text-sm bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+                    View Terminated Participants
+                </button>
+            </div>
+
+            <!-- Vacation Pause -->
+            <div class="bg-yellow-100 border-l-4 border-yellow-500 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold text-yellow-700">Vacation Pause</h2>
+                <p class="text-gray-700 mt-2">
+                    Duration: <strong>21 / 12 / 2025 → 5 / 1 / 2026</strong>
+                </p>
+                <p class="mt-3 text-gray-600">
+                    Official hackathon pause for holidays and end-of-year break.
+                </p>
+            </div>
+
+            <!-- Compain 3 -->
+            <div class="bg-red-100 border-l-4 border-red-500 p-6 rounded-lg relative">
+                <h2 class="text-2xl font-bold text-red-700">Compain 3</h2>
+                <p class="text-gray-700 mt-2">Date: <strong>6 / 1 / 2026</strong></p>
+                <p class="mt-3 text-gray-600">
+                    Post-vacation compain reviewing project progress and attendance.
+                </p>
+                <button onclick="showTerminated('c3')" 
+                    class="absolute bottom-4 right-4 text-sm bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+                    View Terminated Participants
+                </button>
+            </div>
+
+            <!-- Compain 4 -->
+            <div class="bg-red-100 border-l-4 border-red-500 p-6 rounded-lg relative">
+                <h2 class="text-2xl font-bold text-red-700">Compain 4</h2>
+                <p class="text-gray-700 mt-2">Date: <strong>10 / 1 / 2026</strong></p>
+                <p class="mt-3 text-gray-600">
+                    Strict enforcement on submission deadlines and documentation.
+                </p>
+                <button onclick="showTerminated('c4')" 
+                    class="absolute bottom-4 right-4 text-sm bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+                    View Terminated Participants
+                </button>
+            </div>
+
+            <!-- Final Compain -->
+            <div class="bg-blue-100 border-l-4 border-blue-500 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold text-blue-700">Final Compain</h2>
+                <p class="text-gray-700 mt-2">Date: <strong>15 / 1 / 2026</strong></p>
+                <p class="mt-3 text-gray-600">
+                    Final eligibility confirmation before Grand Finals.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js" defer></script>
+    <script src="components/footer.js" defer></script>
+
+    <!-- Termination Alerts -->
+
+    <script>
+    const terminatedParticipants = {
+        c1: [
+            "Kevin Rwigema",
+            "Grace Uwimana",
+            "Mike Byiringiro",
+            "David Habimana",
+            "Umutoni Uwase"
+        ],
+        c2: [
+            "Linda Mutesi",
+            "Aime Niyonsaba",
+            "Roger Kwizera",
+            "Henry Niyonshuti",
+            "Ishimwe Prince"
+        ],
+        c3: [
+            "Emmanuel Rukundo",
+            "Alice Mukarugwiro",
+            "Brian Tuyishime",
+            "Fabrice Nsengiyumva",
+            "Linda Nyirahabimana"
+        ],
+        c4: [
+            "Nancy Ingabire",
+            "Jonathan Nduwayezu",
+            "Claudine Uwimana",
+            "Uwacu Zaneza Lewis",
+            "Josephine Mukeshimana"
+        ]
+    };
+
+    function showTerminated(compainId) {
+        const listEl = document.getElementById("terminatedList");
+        listEl.innerHTML = "";
+
+        terminatedParticipants[compainId].forEach(name => {
+            const li = document.createElement("li");
+            li.className = "bg-red-50 border-l-4 border-red-500 px-3 py-2 rounded";
+            li.textContent = name;
+            listEl.appendChild(li);
+        });
+
+        document.getElementById("terminatedModal").classList.remove("hidden");
+        document.getElementById("terminatedModal").classList.add("flex");
+    }
+
+    function closeModal() {
+        const modal = document.getElementById("terminatedModal");
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+    }
+</script>
+
+<!-- Terminated Participants Modal -->
+<div id="terminatedModal" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-xl w-full max-w-md p-6 shadow-xl relative animate-fadeIn">
+        <h2 class="text-2xl font-bold text-red-600 mb-4">
+            Terminated Participants
+        </h2>
+
+        <ul id="terminatedList" class="space-y-2 text-gray-700"></ul>
+
+        <button onclick="closeModal()"
+            class="mt-6 w-full bg-gray-800 text-white py-2 rounded-lg hover:bg-black transition">
+            Close
+        </button>
+
+        <button onclick="closeModal()"
+            class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 text-xl">
+            &times;
+        </button>
+    </div>
+</div>
+
+
+</body>
+</html>
+
